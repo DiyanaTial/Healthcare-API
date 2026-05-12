@@ -33,24 +33,23 @@ The API is available at `http://localhost:8000/docs`
 
 ## Project Structure
 Healthcare-API/
-|--app/
-|   |--main.py #FastAPI app entry point
-|   |--database.py #Database connection
-|   |--models.py #SQLAlchemy table definitions
-|   |--routes/
-|       |--metrics.py #Hospital data endpoints
-|       |--insights.py #ML Anomaly detection endpoints
-|--ml/
-|   |--anomaly.py #Isolation Forest model training
-|--data/
-|   |--seed.py #ETL script for CMS data
-|--tests/
-|   |--test_metrics.py #Metrics endpoint tests
-|   |--test_insights.py #Insights endpoint tests
-|
-|--Dockerfile
-|--docker-compose.yml
-|--requirements.txt
+├── app/
+│   ├── main.py          # FastAPI app entry point
+│   ├── database.py      # Database connection
+│   ├── models.py        # SQLAlchemy table definitions
+│   └── routes/
+│       ├── metrics.py   # Hospital data endpoints
+│       └── insights.py  # ML anomaly detection endpoints
+├── ml/
+│   └── anomaly.py       # Isolation Forest model training
+├── data/
+│   └── seed.py          # ETL script for CMS data
+├── tests/
+│   ├── test_metrics.py  # Metrics endpoint tests
+│   └── test_insights.py # Insights endpoint tests
+├── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
 
 ## API endpoints
 GET `/health` : health check
