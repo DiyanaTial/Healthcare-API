@@ -56,24 +56,24 @@ Healthcare-API/
 
 ## API endpoints
 ```
-GET `/health` : health check
-GET `/metrics/`: Get hospital metrics, filter by state and measure
-GET `/metrics/aggregate`: Get average scores grouped by state
-GET `/insights/anomalies/`: Get ML-flagged anomalous hospitals
+GET /health : health check
+GET /metrics/: Get hospital metrics, filter by state and measure
+GET /metrics/aggregate: Get average scores grouped by state
+GET /insights/anomalies/: Get ML-flagged anomalous hospitals
 ```
 
 ### Example requests
 Get all Kansas ER wait times:
 ```
-GET `/metrics/?state=KS&measure_id=OP_18b`
+GET /metrics/?state=KS&measure_id=OP_18b
 ```
 Get average ER wait time by state:
 ```
-GET `/metrics/aggregate?measure_id=OP_18b`
+GET /metrics/aggregate?measure_id=OP_18b
 ```
 Get anomalous hospitals in Kansas:
 ```
-GET `/insights/anomalies?state=KS`
+GET /insights/anomalies?state=KS
 ```
 
 ## Data Source
