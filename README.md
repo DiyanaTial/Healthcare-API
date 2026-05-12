@@ -52,7 +52,6 @@ Healthcare-API/
 |--Dockerfile
 |--docker-compose.yml
 |--requirements.txt
-```
 
 ## API endpoints
 ```
