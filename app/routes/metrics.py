@@ -37,13 +37,24 @@ def get_aggregate(
         func.max(HospitalMetric.score).label("max_score"),
         func.count(HospitalMetric.facility_id).label("hospital_count")
     ).filter(
-        HospitalMetric.measure_id == measure_id.upper()
+        HospitalMetric.measure_id == measure_id
     ).group_by(
         HospitalMetric.state
     ).order_by(
         func.avg(HospitalMetric.score).desc()
     )
     
-    return query.all()
+    results = query.all()
+    
+    return [ 
+        {
+            "state": r.state,
+            "avg_score": round(r.avg_score, 2),
+            "min_score": r.min_score,
+            "max_score": r.max_score,
+            "hospital_count": r.hospital_count
+        }
+        for r in results
+    ]
     
     
