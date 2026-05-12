@@ -32,6 +32,7 @@ docker compose up --build
 The API is available at `http://localhost:8000/docs`
 
 ## Project Structure
+```
 Healthcare-API/
 |--app/
 |   |--main.py #FastAPI app entry point
@@ -51,8 +52,10 @@ Healthcare-API/
 |--Dockerfile
 |--docker-compose.yml
 |--requirements.txt
+```
 
 ## API endpoints
+```
 GET `/health` : health check
 GET `/metrics/`: Get hospital metrics, filter by state and measure
 GET `/metrics/aggregate`: Get average scores grouped by state
@@ -67,6 +70,7 @@ GET `/metrics/aggregate?measure_id=OP_18b`
 
 Get anomalous hospitals in Kansas:
 GET `/insights/anomalies?state=KS`
+```
 
 ## Data Source
 Hospital performance data sourced from the CMS Hospital Care Compare dataset, including 53,749 records covering timely and effective care measures across 4,500+ U.S. hospitals.
